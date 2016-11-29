@@ -47,7 +47,7 @@
             'Robbery': '#ba4b1f',
             'Other': '#E88AFB',
             'Theft': '#6B3FF6',
-            'Shooting': '#a00ba5',
+            'Shooting': '#282222',
             'Burglary': '#4BD057',
         }
 

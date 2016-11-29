@@ -16,7 +16,7 @@
 
         function searchCrimeData(longitude, latitude) {
             return $http
-                .get('http://api.spotcrime.com/crimes.json?lat=' + latitude + '&lon=' + longitude + '&radius=0.02&key=.');
+                .get('http://api.spotcrime.com/crimes.json?lat=' + latitude + '&lon=' + longitude + '&radius=0.07&key=.');
 
         };
     }

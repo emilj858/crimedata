@@ -19,3 +19,7 @@ h1 {
 p {
 	font-size: 40px;
 }
+
+panel-heading {
+	text-decoration-color: white;
+}
