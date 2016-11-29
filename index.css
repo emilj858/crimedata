@@ -1,0 +1,12 @@
+body { 
+  background: url(http://i.giphy.com/3oEjHYiYc60KHkYKEo.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.well {
+	opacity: .8;
+}
+

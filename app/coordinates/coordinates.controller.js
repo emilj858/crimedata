@@ -35,9 +35,21 @@
         }
 
         function showCrimeDataToUser(response) {
-        	toastr.success('Success!', 'Got crime data');
+            toastr.success('Success!', 'Got crime data');
 
             vm.crimeData = response.data;
         }
+        vm.colors = {
+            'Assault': '#f48d27',
+            'Vandalism': '#a81fba',
+            'Murder': '#a2ba1f',
+            'Arrest': '#ba1f3e',
+            'Robbery': '#ba4b1f',
+            'Other': '#E88AFB',
+            'Theft': '#6B3FF6',
+            'Shooting': '#a00ba5',
+            'Burglary': '#4BD057',
+        }
+
     }
 })();

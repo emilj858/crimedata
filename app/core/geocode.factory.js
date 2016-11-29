@@ -16,9 +16,9 @@
 
         ////////////////
 
-        function getCoordinates(cityName) {
+        function getCoordinates(city) {
             return $http
-                .get('http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&APPID=cdb3dd37673de698ff2c51562b68edb1');
+                .get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=cdb3dd37673de698ff2c51562b68edb1');
         }
     }
 })();
