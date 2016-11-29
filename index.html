@@ -9,7 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css">
-    <link rel="stylesheet" href="index.css"
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,21 +18,22 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 </head>
+
 <body>
-    <div class="container" ng-controller="CrimeController as crimeCtrl">
-        <div class="well clearfix" style="background-color: #5C77E9;">
+    <div class="container" ng-controller="CrimeController as crimeCtrl" style="margin-top: 12px;">
+        <div class="well well-sm clearfix" style="background-color: #5C77E9;">
             <h1 style="text-align: center;">Crime Data</h1>
             <p style="text-align: center;">Enter a city name to find crime data</p>
             <!-- /.col-lg-6 -->
             <!-- /.row -->
             <div class="col-md-12">
-            	<form ng-submit="crimeCtrl.callCrimeController(city)">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter City" ng-model="city">
-                    <span class="input-group-btn">
-				        <button class="btn btn-primary" type="button" ng-click="crimeCtrl.callCrimeController(city)">Go!</button>
+                <form ng-submit="crimeCtrl.callCrimeController(city)">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter City" ng-model="city">
+                        <span class="input-group-btn">
+				        <button class="btn btn-danger" type="button" ng-click="crimeCtrl.callCrimeController(city)">Go!</button>
 				    </span>
-                </div>
+                    </div>
                 </form>
                 <!-- /input-group -->
             </div>
@@ -40,20 +42,19 @@
         <div class="row" style="margin-top: 24px;">
             <div class="col-sm-4" ng-repeat="crimeInfo in crimeCtrl.crimeData.crimes">
                 <div class="panel panel-default">
-			<div class="panel-heading" ng-style="{'background-color': crimeCtrl.colors[crimeInfo.type]}">                       
-						 <span>
+                    <div class="panel-heading" ng-style="{'background-color': crimeCtrl.colors[crimeInfo.type]}" style="text-align: center;">
+                        <span>
                           <b> {{crimeInfo.type}} </b>
                         </span>
                     </div>
                     <div class="panel-body" style="text-align: center;">
                         {{crimeInfo.date}}
-                        <br>  Address: {{crimeInfo.address}}
+                        <br> Address: {{crimeInfo.address}}
                         <br> <a href="{{crimeInfo.link}}">More Details! </a>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
